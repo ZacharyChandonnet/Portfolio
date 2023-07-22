@@ -1,0 +1,10 @@
+html {
+  color: white;
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+  max-width: 1920px;
+}
+
+* h1, h2, h3, h4, h5, h6 {
+  font-family: "Melodrama", serif;
+}/*# sourceMappingURL=style.css.map */
