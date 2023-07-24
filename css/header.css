@@ -17,6 +17,7 @@ header .component-header .navbar {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 99999;
 }
 header .component-header .navbar .menu-ham {
   display: block;
@@ -72,9 +73,9 @@ header .landing .division .texte {
   padding-top: 8rem;
 }
 header .landing .division .texte h1 {
-  font-size: 1.5rem;
-  padding-top: 2.5rem;
-  line-height: 2rem;
+  font-size: 1.2rem;
+  padding-top: 4rem;
+  line-height: 2.2rem;
 }
 header .landing .division .texte h1 i {
   font-size: 0.8rem;
@@ -86,7 +87,7 @@ header .landing .division .circle {
   height: 600px;
   background: linear-gradient(45deg, #ed71ad, #7277f1);
   border-radius: 50% 20% 80% 30%/40% 10% 70% 20%;
-  animation: pulse 3s ease-in-out infinite alternate, glow 3s ease-in-out infinite alternate;
+  animation: pulse 2s ease-in-out infinite alternate, glow 2s ease-in-out infinite alternate;
   box-shadow: 0 0 20px 5px rgba(237, 113, 173, 0.7);
   right: 0;
   bottom: 1;
@@ -110,6 +111,28 @@ header .landing .division .circle {
   }
 }
 
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  header .landing {
+    margin-top: 10rem !important;
+  }
+  header .landing .circle {
+    width: 900px !important;
+    height: 900px !important;
+  }
+  header .landing .division p {
+    margin-top: 5rem;
+  }
+  header .landing .division h1 {
+    font-size: 2rem !important;
+    padding-left: 5rem !important;
+    line-height: 3rem !important;
+    padding-top: 10rem !important;
+  }
+  header .landing .division h1 i {
+    font-size: 1rem !important;
+  }
+}
 /* Desktop */
 @media screen and (min-width: 1200px) {
   header .component-header {

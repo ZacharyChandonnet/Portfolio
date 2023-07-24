@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/about.css" />
 
     <script type="module">
       import App from "./js/App.js";
@@ -20,6 +21,9 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
       rel="stylesheet"
     />
+
+    <script src="https://unpkg.com/split-type"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -37,42 +41,93 @@
 
     <title>chando.dev</title>
   </head>
-  <body>
-    <header>
-      <div class="component-header">
-        <div class="logo">
-          <p>chando.dev</p>
-        </div>
-        <nav class="navbar">
-          <div class="nav-links">
-            <ul>
-              <li><a href="resume">resume</a></li>
-              <li><a href="work">work</a></li>
-              <li><a href="contact">contact</a></li>
-            </ul>
-          </div>
-          <img src="/src/menu-btn.png" alt="menu hamburger" class="menu-ham" />
-        </nav>
+  <body onload="move()">
+    <div id="preloader">
+      <div id="percent">chando.dev</div>
+      <div id="bar">
+        <div id="barconfirm"></div>
       </div>
-      <div class="landing">
-        <div class="division">
-          <div class="texte">
-            <p>hi, bonjour</p>
-            <h1>
-              i am zachary. <br />
-              web developer based in <br />
-              <span class="highlight">canada quebec</span>, montreal. <br />
-              <a target="_blank" href="https://github.com/ZacharyChandonnet"><i class="fa-brands fa-github" style="color: #ffffff"></i></a>
-              <a  target="_blank" href="https://www.linkedin.com/in/zachary-chandonnet-714193271/"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></a>
-            </h1>
+    </div>
+      <header>
+        <div class="component-header">
+          <div class="logo">
+            <p class="title">chando.dev</p>
           </div>
-          <div class="circle"></div>
+          <nav class="navbar">
+            <div class="nav-links">
+              <ul>
+                <li><a href="#resume" data-scroll>resume</a></li>
+                <li><a href="#work" data-scroll>work</a></li>
+                <li><a href="#contact" data-scroll>contact</a></li>
+              </ul>
+            </div>
+            <img
+              src="/src/menu-btn.png"
+              alt="menu hamburger"
+              class="menu-ham"
+            />
+          </nav>
         </div>
-      </div>
-    </header>
+        <div class="landing">
+          <div class="division">
+            <div class="texte">
+              <p class="title">hi, bonjour</p>
+              <h1 class="title">
+                i am zachary. <br />
+                web developer based in <br />
+                <span class="highlight">canada quebec</span>, montreal. <br />
+                <a target="_blank" href="https://github.com/ZacharyChandonnet"
+                  ><i class="fa-brands fa-github" style="color: #ffffff"></i
+                ></a>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/zachary-chandonnet-714193271/"
+                  ><i class="fa-brands fa-linkedin" style="color: #ffffff"></i
+                ></a>
+              </h1>
+            </div>
+            <div class="circle title"></div>
+          </div>
+        </div>
+      </header>
 
-    <section id="resume">
-      <h2>about me</h2>
-    </section>
+      <section id="resume">
+        <h2>about me</h2>
+      </section>
+    </div>
   </body>
+  <script>
+    const screen = gsap.timeline({
+      paused: "true",
+    });
+
+    screen.to("#percent, #bar", {
+      duration: 0.5,
+      opacity: 0,
+      zIndex: -1,
+    });
+
+    screen.to("#preloader", {
+      duration: 1.5,
+      width: "0%",
+    });
+
+    var width = 1;
+    var bar = document.getElementById("barconfirm");
+    var id;
+    function move() {
+      id = setInterval(frame, 10);
+    }
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        screen.play();
+      } else {
+        width++;
+        bar.style.width = width ;
+       
+      }
+    }
+   
+  </script>
 </html>

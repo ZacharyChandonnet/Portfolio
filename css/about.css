@@ -1,0 +1,9 @@
+#resume {
+  margin-top: 10rem;
+}
+
+@media screen and (min-width: 1200px) {
+  #resume h2 {
+    font-size: 2.5rem;
+  }
+}/*# sourceMappingURL=about.css.map */
