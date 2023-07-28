@@ -1,8 +1,24 @@
-#resume {
-  margin-top: 10rem;
+@charset "UTF-8";
+#resume .about .me {
+  text-align: justify;
 }
-
 @media screen and (min-width: 1200px) {
+  #resume {
+    margin-top: 12rem;
+  }
+  #resume .about {
+    display: flex;
+  }
+  #resume .about .me {
+    width: 40vw;
+    line-height: 2rem;
+    margin-top: 50px;
+  }
+  #resume .title-container {
+    border-bottom: 1px solid white; /* Ajoute une bordure en bas de 1px de largeur au conteneur du titre */
+    width: 40vw; /* Définit la longueur de la bordure en bas à 200px */
+    padding-bottom: 10px; /* Ajuste l'espace entre le texte du titre et la bordure en bas */
+  }
   #resume h2 {
     font-size: 2.5rem;
   }

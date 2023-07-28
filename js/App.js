@@ -7,6 +7,7 @@ export default class App {
         this.hamMenu();
         this.nav();
         this.title();
+        this.me();
     }
     /**
      * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
@@ -42,7 +43,7 @@ export default class App {
     static title() {
 
         gsap.to('.title', {
-            delay:2,
+            delay: 2,
             y: 0,
             duration: 4,
             opacity: 1,
@@ -56,6 +57,35 @@ export default class App {
             opacity: 0,
             ease: "power4.easeIn",
         });
+    }
+
+    static me() {
+        const myText = document.querySelector(".aboutMe");
+        const text = myText.innerText;
+        let index = 1; 
+
+        function updateText() {
+            myText.innerText = text.substr(0, index);
+
+            if (index < text.length) {
+                index++;
+                gsap.delayedCall(0.2, updateText);
+            } else if (index === text.length) {
+                gsap.delayedCall(1, removeText);
+            }
+        }
+
+        function removeText() {
+            if (index > 1) {
+                index--;
+                myText.innerText = text.substr(0, index);
+                gsap.delayedCall(0.2, removeText);
+            } else {
+                gsap.delayedCall(1, updateText);
+            }
+        }
+
+        updateText();
     }
 }
 App.init();
