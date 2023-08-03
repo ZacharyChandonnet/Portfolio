@@ -69,7 +69,7 @@ export default class App {
 
             if (index < text.length) {
                 index++;
-                gsap.delayedCall(0.2, updateText);
+                gsap.delayedCall(0.18, updateText);
             } else if (index === text.length) {
                 gsap.delayedCall(1, removeText);
             }
@@ -79,7 +79,7 @@ export default class App {
             if (index > 1) {
                 index--;
                 myText.innerText = text.substr(0, index);
-                gsap.delayedCall(0.2, removeText);
+                gsap.delayedCall(0.18, removeText);
             } else {
                 gsap.delayedCall(1, updateText);
             }
