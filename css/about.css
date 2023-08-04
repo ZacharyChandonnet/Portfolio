@@ -1,8 +1,51 @@
+#resume {
+  margin-top: 5rem !important;
+}
 #resume .about .me {
   text-align: justify;
   line-height: 2rem;
   margin-top: 25px;
   width: 90vw;
+}
+#resume .about .language {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+#resume .about .language .icon {
+  font-size: 30px;
+  cursor: pointer;
+}
+@keyframes spinClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinAntiClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+#resume .about .language .icon:not(.reversed) {
+  animation: spinClockwise 20s infinite linear;
+}
+#resume .about .language .icon.reversed {
+  animation: spinAntiClockwise 20s infinite linear;
+}
+#resume .about .language .icon.faster {
+  animation-duration: 7s;
+}
+#resume .about .language .icon.slow {
+  animation-duration: 35s;
+}
+#resume .about .language .icon.slower {
+  animation-duration: 25s;
 }
 #resume .title-container {
   position: relative;
@@ -37,7 +80,7 @@
 
 @media screen and (min-width: 1200px) {
   #resume {
-    margin-top: 12rem;
+    margin-top: 12rem !important;
   }
   #resume .about {
     display: flex;
@@ -45,10 +88,38 @@
   #resume .about .me {
     width: 40vw;
   }
+  #resume .about .language {
+    grid-template-columns: repeat(3, 1fr) !important;
+    margin-left: 20vw;
+    gap: 70px;
+  }
+  #resume .about .language .icon:nth-of-type(1) {
+    font-size: 100px;
+  }
+  #resume .about .language .icon:nth-of-type(2) {
+    font-size: 75px;
+  }
+  #resume .about .language .icon:nth-of-type(3) {
+    font-size: 85px;
+  }
+  #resume .about .language .icon:nth-of-type(4) {
+    font-size: 50px;
+  }
+  #resume .about .language .icon:nth-of-type(5) {
+    font-size: 65px;
+  }
+  #resume .about .language .icon:nth-of-type(6) {
+    font-size: 90px;
+  }
   #resume .title-container {
     width: 40vw;
   }
   #resume h2 {
     font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #resume {
+    margin-top: 10rem;
   }
 }/*# sourceMappingURL=about.css.map */

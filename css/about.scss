@@ -1,4 +1,5 @@
 #resume {
+  margin-top: 5rem !important;
   .about {
     .me {
       text-align: justify;
@@ -8,7 +9,52 @@
     }
 
     .language {
-     
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+
+      .icon {
+        font-size: 30px;
+        cursor: pointer;
+      }
+
+      @keyframes spinClockwise {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      
+      @keyframes spinAntiClockwise {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(-360deg);
+        }
+      }
+      
+      .icon:not(.reversed) {
+        animation: spinClockwise 20s infinite linear;
+      }
+      
+      .icon.reversed {
+        animation: spinAntiClockwise 20s infinite linear;
+      }
+
+      .icon.faster {
+        animation-duration: 7s; 
+      }
+
+      .icon.slow {
+        animation-duration: 35s; 
+      }
+
+      .icon.slower {
+        animation-duration: 25s; 
+      }
     }
   }
   .title-container {
@@ -17,7 +63,7 @@
     padding-bottom: 10px;
   }
 
-.title-container::after {
+  .title-container::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -27,29 +73,28 @@
     background: linear-gradient(45deg, #ed71ad, #7277f1);
     background-size: 200% 100%;
     animation: animateGradient 3s infinite;
-}
+  }
 
-@keyframes animateGradient {
+  @keyframes animateGradient {
     0% {
-        background-position: 0% 50%;
+      background-position: 0% 50%;
     }
     50% {
-        background-position: 100% 50%;
+      background-position: 100% 50%;
     }
     100% {
-        background-position: 0% 50%;
+      background-position: 0% 50%;
     }
-}
+  }
 
-
-  h2{
+  h2 {
     font-size: 1.5rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
   #resume {
-    margin-top: 12rem;
+    margin-top: 12rem !important;
     .about {
       display: flex;
 
@@ -58,15 +103,48 @@
       }
 
       .language {
+        grid-template-columns: repeat(3, 1fr) !important;
+        margin-left: 20vw;
+        gap: 70px;
+
+        .icon:nth-of-type(1) {
+          font-size: 100px;
+        }
+
+        .icon:nth-of-type(2) {
+          font-size: 75px;
+        }
+
+        .icon:nth-of-type(3) {
+          font-size: 85px;
+        }
+
+        .icon:nth-of-type(4) {
+          font-size: 50px;
+        }
+
+        .icon:nth-of-type(5) {
+          font-size: 65px;
+        }
+
+        .icon:nth-of-type(6) {
+          font-size: 90px;
+        }
       }
     }
 
     .title-container {
-      width: 40vw; 
+      width: 40vw;
     }
 
     h2 {
       font-size: 2.5rem;
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #resume {
+    margin-top: 10rem;
   }
 }

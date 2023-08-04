@@ -62,7 +62,7 @@ export default class App {
     static me() {
         const myText = document.querySelector(".aboutMe");
         const text = myText.innerText;
-        let index = 1; 
+        let index = 1;
 
         function updateText() {
             myText.innerText = text.substr(0, index);
