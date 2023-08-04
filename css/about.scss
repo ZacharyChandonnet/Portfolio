@@ -10,12 +10,14 @@
 
     .language {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 10px;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 30px;
+      margin-top: 3rem;
 
       .icon {
         font-size: 30px;
         cursor: pointer;
+        text-shadow: 0 0 30px rgba(240, 124, 255, 0.322);
       }
 
       @keyframes spinClockwise {
@@ -45,7 +47,7 @@
       }
 
       .icon.faster {
-        animation-duration: 7s; 
+        animation-duration: 10s; 
       }
 
       .icon.slow {
@@ -92,6 +94,18 @@
   }
 }
 
+/* TABLET */
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  #resume{
+    .language{
+      gap: 90px !important;
+    }
+  }
+}
+
+/* DESKTOP */
+
 @media screen and (min-width: 1200px) {
   #resume {
     margin-top: 12rem !important;
@@ -105,7 +119,8 @@
       .language {
         grid-template-columns: repeat(3, 1fr) !important;
         margin-left: 20vw;
-        gap: 70px;
+        gap: 70px !important;
+        margin-top: inherit !important;
 
         .icon:nth-of-type(1) {
           font-size: 100px;
