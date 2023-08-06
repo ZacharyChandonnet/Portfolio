@@ -8,6 +8,7 @@ export default class App {
         this.nav();
         this.title();
         this.me();
+        this.show();
     }
     /**
      * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
@@ -87,5 +88,22 @@ export default class App {
 
         updateText();
     }
+
+    static show() {
+        var items = document.querySelectorAll('.item');
+        
+        function fadeInOnScroll() {
+          items.forEach(function (item) {
+            var position = item.getBoundingClientRect().top;
+            var windowHeight = window.innerHeight;
+    
+            if (position < windowHeight) {
+              gsap.to(item, { opacity: 1, duration: 1.5, delay:0.2, ease: "power4.ease" });
+            }
+          });
+        }
+    
+        window.addEventListener('scroll', fadeInOnScroll);
+      }
 }
 App.init();

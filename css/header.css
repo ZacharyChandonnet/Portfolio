@@ -82,6 +82,7 @@ header .landing .division .texte h1 i {
   cursor: pointer;
 }
 header .landing .division .circle {
+  display: block;
   position: absolute;
   width: 600px;
   height: 600px;
