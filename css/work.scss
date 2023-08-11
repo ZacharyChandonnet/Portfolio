@@ -112,6 +112,7 @@
 
     .left {
       display: flex !important;
+      margin-top: 25px !important;
 
       .showcase {
         width: 40vw !important;
@@ -119,6 +120,7 @@
         .headerVideo {
           width: 40vw !important;
           cursor: pointer;
+          margin-left: 12.5vw;
         }
 
         .headerVideo:hover {
@@ -130,9 +132,8 @@
       .description {
         line-height: 45px !important;
         text-align: justify !important;
-        margin: auto;
-        margin-left: 15rem;
         width: 40vw !important;
+        margin: auto 0;
       }
     }
   }
