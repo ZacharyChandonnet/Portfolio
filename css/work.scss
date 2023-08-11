@@ -10,19 +10,18 @@
     grid-template-columns: repeat(1, 1fr);
     margin-top: 25px;
 
-    .projectTitle{
+    .projectTitle {
       text-align: center;
       font-size: 1.2rem;
       margin: 1.5rem 0 1rem 0;
     }
 
     .showcase {
-      
-      #headerVideo {
+      .headerVideo {
         width: 90vw;
       }
 
-      #headerVideo:hover {
+      .headerVideo:hover {
       }
     }
 
@@ -39,6 +38,29 @@
     .icon {
       font-size: 1.5rem;
       margin: 1rem 0.2rem;
+    }
+    .code {
+      text-align: center;
+    }
+  }
+
+  .left {
+    .projectTitle {
+      text-align: center;
+      font-size: 1.2rem;
+      margin: 1.5rem 0 1rem 0;
+    }
+
+    .icon-container {
+      text-align: center;
+    }
+
+    .icon {
+      font-size: 1.5rem;
+      margin: 1rem 0.2rem;
+    }
+    .code {
+      text-align: center;
     }
   }
 }
@@ -68,12 +90,38 @@
       .showcase {
         width: 40vw !important;
 
-        #headerVideo {
+        .headerVideo {
           width: 40vw !important;
           cursor: pointer;
         }
 
-        #headerVideo:hover {
+        .headerVideo:hover {
+          transition: transform 0.5s ease-in-out; /* Changer la durée et la fonction de temporisation au besoin */
+          transform: scale(1.05);
+        }
+      }
+
+      .description {
+        line-height: 45px !important;
+        text-align: justify !important;
+        margin: auto;
+        margin-left: 15rem;
+        width: 40vw !important;
+      }
+    }
+
+    .left {
+      display: flex !important;
+
+      .showcase {
+        width: 40vw !important;
+
+        .headerVideo {
+          width: 40vw !important;
+          cursor: pointer;
+        }
+
+        .headerVideo:hover {
           transition: transform 0.5s ease-in-out; /* Changer la durée et la fonction de temporisation au besoin */
           transform: scale(1.03);
         }

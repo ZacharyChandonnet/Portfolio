@@ -108,17 +108,19 @@ export default class App {
     }
 
     static showcase() {
-        const headerVideoContainer = document.getElementById('headerVideoContainer');
-        const headerVideo = headerVideoContainer.querySelector('video');
-        headerVideo.playbackRate = 1.5;
-        headerVideo.pause();
-
-        headerVideoContainer.addEventListener('mouseover', () => {
-            headerVideo.play();
-        });
-
-        headerVideoContainer.addEventListener('mouseout', () => {
-            headerVideo.pause();
+        const headerVideos = document.querySelectorAll('.headerVideo'); 
+    
+        headerVideos.forEach((video) => {
+            video.playbackRate = 2;
+            video.pause();
+    
+            video.addEventListener('mouseover', () => {
+                video.play();
+            });
+    
+            video.addEventListener('mouseout', () => {
+                video.pause();
+            });
         });
     }
 }

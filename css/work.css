@@ -15,7 +15,7 @@
   font-size: 1.2rem;
   margin: 1.5rem 0 1rem 0;
 }
-#work .right .showcase #headerVideo {
+#work .right .showcase .headerVideo {
   width: 90vw;
 }
 #work .right .description {
@@ -29,6 +29,24 @@
 #work .right .icon {
   font-size: 1.5rem;
   margin: 1rem 0.2rem;
+}
+#work .right .code {
+  text-align: center;
+}
+#work .left .projectTitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 1.5rem 0 1rem 0;
+}
+#work .left .icon-container {
+  text-align: center;
+}
+#work .left .icon {
+  font-size: 1.5rem;
+  margin: 1rem 0.2rem;
+}
+#work .left .code {
+  text-align: center;
 }
 
 /* Desktop */
@@ -52,15 +70,36 @@
   #work .right .showcase {
     width: 40vw !important;
   }
-  #work .right .showcase #headerVideo {
+  #work .right .showcase .headerVideo {
     width: 40vw !important;
     cursor: pointer;
   }
-  #work .right .showcase #headerVideo:hover {
+  #work .right .showcase .headerVideo:hover {
+    transition: transform 0.5s ease-in-out; /* Changer la durée et la fonction de temporisation au besoin */
+    transform: scale(1.05);
+  }
+  #work .right .description {
+    line-height: 45px !important;
+    text-align: justify !important;
+    margin: auto;
+    margin-left: 15rem;
+    width: 40vw !important;
+  }
+  #work .left {
+    display: flex !important;
+  }
+  #work .left .showcase {
+    width: 40vw !important;
+  }
+  #work .left .showcase .headerVideo {
+    width: 40vw !important;
+    cursor: pointer;
+  }
+  #work .left .showcase .headerVideo:hover {
     transition: transform 0.5s ease-in-out; /* Changer la durée et la fonction de temporisation au besoin */
     transform: scale(1.03);
   }
-  #work .right .description {
+  #work .left .description {
     line-height: 45px !important;
     text-align: justify !important;
     margin: auto;
