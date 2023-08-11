@@ -3,6 +3,7 @@ html {
   background-color: black;
   font-family: "Roboto", sans-serif;
   max-width: 1920px;
+  scroll-behavior: smooth;
 }
 
 * h1,

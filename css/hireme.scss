@@ -1,0 +1,39 @@
+*a {
+  color: white;
+}
+
+.hireme {
+  background: linear-gradient(45deg, #ed71ad, #7277f1);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  width: 35vw;
+}
+
+/* Tablet */
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .hireme {
+    width: 20vw !important;
+  }
+}
+
+/* Desktop */
+
+@media screen and (min-width: 1200px) {
+  .hireme {
+    background: linear-gradient(45deg, #ed71ad, #7277f1);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 2rem !important;
+    width: 10vw !important;
+    margin-top: 2rem !important;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .hireme:hover {
+    transform: translateY(-5px);
+  }
+}
