@@ -9,6 +9,7 @@ export default class App {
         this.title();
         this.me();
         this.show();
+        this.showcase();
     }
     /**
      * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
@@ -91,19 +92,34 @@ export default class App {
 
     static show() {
         var items = document.querySelectorAll('.item');
-        
+
         function fadeInOnScroll() {
-          items.forEach(function (item) {
-            var position = item.getBoundingClientRect().top;
-            var windowHeight = window.innerHeight;
-    
-            if (position < windowHeight) {
-              gsap.to(item, { opacity: 1, duration: 1.5, delay:0.2, ease: "power4.ease" });
-            }
-          });
+            items.forEach(function (item) {
+                var position = item.getBoundingClientRect().top;
+                var windowHeight = window.innerHeight;
+
+                if (position < windowHeight) {
+                    gsap.to(item, { opacity: 1, duration: 1.5, delay: 0.2, ease: "power4.ease" });
+                }
+            });
         }
-    
+
         window.addEventListener('scroll', fadeInOnScroll);
-      }
+    }
+
+    static showcase() {
+        const headerVideoContainer = document.getElementById('headerVideoContainer');
+        const headerVideo = headerVideoContainer.querySelector('video');
+        headerVideo.playbackRate = 1.5;
+        headerVideo.pause();
+
+        headerVideoContainer.addEventListener('mouseover', () => {
+            headerVideo.play();
+        });
+
+        headerVideoContainer.addEventListener('mouseout', () => {
+            headerVideo.pause();
+        });
+    }
 }
 App.init();

@@ -1,8 +1,56 @@
 #work {
   margin-top: 5rem;
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .right {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 25px;
+
+    .projectTitle{
+      text-align: center;
+      font-size: 1.2rem;
+      margin: 1.5rem 0 1rem 0;
+    }
+
+    .showcase {
+      
+      #headerVideo {
+        width: 90vw;
+      }
+
+      #headerVideo:hover {
+      }
+    }
+
+    .description {
+      width: 90vw;
+      text-align: center;
+      line-height: 2rem;
+    }
+
+    .icon-container {
+      text-align: center;
+    }
+
+    .icon {
+      font-size: 1.5rem;
+      margin: 1rem 0.2rem;
+    }
+  }
 }
 
+/* Desktop */
+
 @media screen and (min-width: 1200px) {
+  .projectTitle {
+    font-size: 2rem !important;
+    margin-bottom: 1rem !important;
+  }
+
   #work {
     margin-top: 12rem !important;
 
@@ -12,6 +60,32 @@
 
     h2 {
       font-size: 2.5rem !important;
+    }
+
+    .right {
+      display: flex !important;
+
+      .showcase {
+        width: 40vw !important;
+
+        #headerVideo {
+          width: 40vw !important;
+          cursor: pointer;
+        }
+
+        #headerVideo:hover {
+          transition: transform 0.5s ease-in-out; /* Changer la durée et la fonction de temporisation au besoin */
+          transform: scale(1.03);
+        }
+      }
+
+      .description {
+        line-height: 45px !important;
+        text-align: justify !important;
+        margin: auto;
+        margin-left: 15rem;
+        width: 40vw !important;
+      }
     }
   }
 }
