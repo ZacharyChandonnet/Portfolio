@@ -5,47 +5,32 @@
 #work h2 {
   font-size: 1.5rem;
 }
-#work .right {
+#work .right, #work .left {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   margin-top: 25px;
 }
-#work .right .projectTitle {
+#work .right .projectTitle, #work .left .projectTitle {
   text-align: center;
   font-size: 1.2rem;
   margin: 1.5rem 0 1rem 0;
 }
-#work .right .showcase .headerVideo {
+#work .right .showcase .headerVideo, #work .left .showcase .headerVideo {
   width: 90vw;
 }
-#work .right .description {
+#work .right .description, #work .left .description {
   width: 90vw;
   text-align: center;
   line-height: 2rem;
 }
-#work .right .icon-container {
+#work .right .icon-container, #work .left .icon-container {
   text-align: center;
 }
-#work .right .icon {
+#work .right .icon, #work .left .icon {
   font-size: 1.5rem;
   margin: 1rem 0.2rem;
 }
-#work .right .code {
-  text-align: center;
-}
-#work .left .projectTitle {
-  text-align: center;
-  font-size: 1.2rem;
-  margin: 1.5rem 0 1rem 0;
-}
-#work .left .icon-container {
-  text-align: center;
-}
-#work .left .icon {
-  font-size: 1.5rem;
-  margin: 1rem 0.2rem;
-}
-#work .left .code {
+#work .right .code, #work .left .code {
   text-align: center;
 }
 

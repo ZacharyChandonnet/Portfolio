@@ -53,7 +53,7 @@ export default class App {
         });
 
         gsap.from('.navbar', {
-            delay: 1,
+            delay: 1.5,
             y: -100,
             duration: 2,
             opacity: 0,

@@ -5,7 +5,7 @@
     font-size: 1.5rem;
   }
 
-  .right {
+  .right, .left {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     margin-top: 25px;
@@ -29,26 +29,6 @@
       width: 90vw;
       text-align: center;
       line-height: 2rem;
-    }
-
-    .icon-container {
-      text-align: center;
-    }
-
-    .icon {
-      font-size: 1.5rem;
-      margin: 1rem 0.2rem;
-    }
-    .code {
-      text-align: center;
-    }
-  }
-
-  .left {
-    .projectTitle {
-      text-align: center;
-      font-size: 1.2rem;
-      margin: 1.5rem 0 1rem 0;
     }
 
     .icon-container {

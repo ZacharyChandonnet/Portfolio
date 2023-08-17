@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/about.css" />
     <link rel="stylesheet" href="css/work.css" />
     <link rel="stylesheet" href="css/hireme.css" />
+    <link rel="stylesheet" href="css/contact.css" />
     <link rel="icon" href="favicon.ico">
 
     <script type="module">
@@ -108,13 +109,12 @@
         </div>
           <div class="language item hidden">
             <a class="icon faster" href="#bookClub"><i class="fa-brands fa-html5" style="color: #ed71ad;"></i></a>
-            <a class="icon reversed slow" href=""><i class="fa-brands fa-php" style="color: #7277f1;"></i></a>
+            <a class="icon reversed slow" href="#barberShop"><i class="fa-brands fa-php" style="color: #7277f1;"></i></a>
             <a class="icon slower" href=""><i class="fa-brands fa-react" style="color: #ed71ad;"></i></a>
-            <a class="icon reversed" href=""><i class="fa-brands fa-laravel" style="color: #7277f1;"></i></a>
+            <a class="icon reversed" href="#adminPanel"><i class="fa-brands fa-laravel" style="color: #7277f1;"></i></a>
             <a class="icon " href="#bookClub"><i class="fa-brands fa-sass" style="color: #ed71ad;"></i></a>
             <a class="icon reversed faster" href="#bookClub"><i class="fa-brands fa-js" style="color: #7277f1;"></i></a>
         </div>
-  
         </div>
       </section>
 
@@ -159,13 +159,58 @@
              </a>
           </div>
           <div class="showcase">
-            <a href="https://main--harmonious-cat-d78f2d.netlify.app/" target="_blank">
+            <a href="https://harmonious-cat-d78f2d.netlify.app/" target="_blank">
               <video class="headerVideo" autoplay muted loop>
                 <source src="/src/mad.mp4" type="video/mp4">
               </video>
             </a>
           </div>
         </div>
+
+        <div class="right item hidden" id="headerVideoContainer">
+          <div class="showcase">
+              <a href="https://github.com/ZacharyChandonnet/PHP-project-" target="_blank">
+                <video class="headerVideo" autoplay muted loop>
+                  <source src="/src/php.mp4" type="video/mp4">
+              </a>
+              </video>
+          </div>
+          <div class="description">
+            <h3 id="barberShop" class="projectTitle">Barber Shop</h3>
+            <p>Welcome to Suave barber shop! Showcasing a fully functional contact form utilizing Gmail SMTP and an intuitive login form. Each user has access to a range of valuable information, including details about our skilled barbers, our competitive prices, and our convenient opening hours. </p>
+            <div class="icon-container">
+              <i class="fa-brands fa-html5 icon" style="color: #ed71ad;"></i>
+              <i class="fa-brands fa-sass icon" style="color: #ed71ad;"></i>
+              <i class="fa-brands fa-php" style="color: #7277f1;"></i>
+            </div>
+             <a href="https://github.com/ZacharyChandonnet/PHP-project-" target="_blank">
+               <p class="code">Code <i class="fa-brands fa-github" style="color: #ffffff"></i></p>
+             </a>
+          </div>
+        </div>
+
+        <div class="left item hidden" id="headerVideoContainer">
+          <div class="description">
+            <h3 id="adminPanel" class="projectTitle">Admin Panel</h3>
+            <p>This Laravel-based web app includes database functionality to create/edit information, a login/register form, and an API for the front-end team. The API allows users to add favorites, enhancing their experience.</p>
+            <div class="icon-container">
+              <i class="fa-brands fa-html5 icon" style="color: #ed71ad;"></i>
+              <i class="fa-brands fa-sass icon" style="color: #ed71ad;"></i>
+              <i class="fa-brands fa-laravel" style="color: #7277f1;"></i>
+            </div>
+             <a href="https://github.com/ZacharyChandonnet/Admin-Panel-Project" target="_blank">
+               <p class="code">Code <i class="fa-brands fa-github" style="color: #ffffff"></i></p>
+             </a>
+          </div>
+          <div class="showcase">
+            <a href="https://github.com/ZacharyChandonnet/Admin-Panel-Project" target="_blank">
+              <video class="headerVideo" autoplay muted loop>
+                <source src="/src/laravel.mp4" type="video/mp4">
+              </video>
+            </a>
+          </div>
+        </div>
+
       </section>
       
 
@@ -182,7 +227,7 @@
     </div>
   </body>
   <script>
-    const screen = gsap.timeline({
+     const screen = gsap.timeline({
       paused: "true",
     });
 
@@ -196,6 +241,7 @@
       duration: 1.5,
       width: "0%",
     });
+
 
     var width = 1;
     var bar = document.getElementById("barconfirm");
