@@ -51,14 +51,6 @@ export default class App {
             opacity: 1,
             ease: "power4.easeIn",
         });
-
-        gsap.from('.navbar', {
-            delay: 1.5,
-            y: -100,
-            duration: 2,
-            opacity: 0,
-            ease: "power4.easeIn",
-        });
     }
 
     static me() {

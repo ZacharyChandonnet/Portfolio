@@ -235,7 +235,7 @@
     </div>
   </body>
   <script>
-     const screen = gsap.timeline({
+   const screen = gsap.timeline({
       paused: "true",
     });
 
@@ -250,7 +250,13 @@
       width: "0%",
     });
 
-
+    screen.from(
+      ".navbar",
+      {
+        duration: 1.5,
+        y: "-350%",
+      },
+    );
     var width = 1;
     var bar = document.getElementById("barconfirm");
     var id;
