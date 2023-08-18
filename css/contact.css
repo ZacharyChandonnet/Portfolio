@@ -1,2 +1,92 @@
+#contact {
+  margin-top: 5rem;
+}
+#contact .glowBox {
+  position: relative;
+  height: 300px;
+}
+#contact .glowBox h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 2rem;
+}
+#contact .glowBox::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  border: 1px solid transparent;
+  -o-border-image: linear-gradient(45deg, #ed71ad, #7277f1);
+     border-image: linear-gradient(45deg, #ed71ad, #7277f1);
+  border-image-slice: 1;
+  animation: animateBorder 3s infinite alternate;
+}
+@keyframes animateBorder {
+  0% {
+    border-image-source: linear-gradient(45deg, #ed71ad, #7277f1);
+  }
+  100% {
+    border-image-source: linear-gradient(45deg, #7277f1, #ed71ad);
+  }
+}
+#contact #form {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 90vw;
+  margin: 0 auto;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+#contact #form input, #contact #form textarea {
+  color: white;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+}
+#contact #form button {
+  background: linear-gradient(45deg, #ed71ad, #7277f1);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+#contact #form button:hover {
+  transform: translateY(-5px);
+}
+
 /* Tablet */
-/* Desktop *//*# sourceMappingURL=contact.css.map */
+/* Desktop */
+@media screen and (min-width: 1200px) {
+  #contact {
+    display: flex;
+    justify-content: center;
+  }
+  .glowBox {
+    text-align: center;
+    position: relative;
+    margin-top: 12rem !important;
+    width: 100vw !important;
+    height: 500px !important;
+  }
+  .glowBox h2 {
+    font-size: 2.5rem !important;
+    margin-top: 2rem !important;
+  }
+  .glowBox #form {
+    width: 70vw !important;
+    gap: 2.5rem !important;
+  }
+  .glowBox #form button {
+    display: block;
+    margin: 1rem auto;
+    width: 5vw !important;
+  }
+}/*# sourceMappingURL=contact.css.map */
