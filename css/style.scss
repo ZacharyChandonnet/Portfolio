@@ -4,6 +4,10 @@ html {
   font-family: "Roboto", sans-serif;
   max-width: 1920px;
   scroll-behavior: smooth;
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  height: 100vh; /* Ensure the content takes up the full viewport height */
 }
 
 *h1,
