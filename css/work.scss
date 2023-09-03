@@ -5,10 +5,11 @@
     font-size: 1.5rem;
   }
 
-  .right, .left {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    margin-top: 25px;
+  .right,
+  .left {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
 
     .projectTitle {
       text-align: center;
@@ -42,6 +43,9 @@
     .code {
       text-align: center;
     }
+  }
+  .left{
+    flex-direction: column-reverse;
   }
 }
 
@@ -92,7 +96,7 @@
     .left {
       display: flex !important;
       margin-top: 25px !important;
-
+      flex-direction: inherit !important;
       .showcase {
         width: 40vw !important;
 
