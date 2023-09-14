@@ -2,11 +2,7 @@ html {
   color: white;
   background-color: black;
   font-family: "Roboto", sans-serif;
-  max-width: 1920px;
   scroll-behavior: smooth;
-  display: flex; /* Use flexbox layout */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
 }
 
 * h1,
