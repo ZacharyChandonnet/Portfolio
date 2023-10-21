@@ -700,13 +700,13 @@ header {
       .showcase {
         width: 40vw !important;
 
-        .headerVideo {
+        .headerVideo, .imgHeader {
           width: 40vw !important;
           cursor: pointer;
         }
 
-        .headerVideo:hover {
-          transition: transform 0.5s ease-in-out; /* Changer la durée et la fonction de temporisation au besoin */
+        .headerVideo:hover, .imgHeader:hover{
+          transition: transform 0.5s ease-in-out; 
           transform: scale(1.05);
         }
       }
@@ -726,13 +726,13 @@ header {
       .showcase {
         width: 40vw !important;
 
-        .headerVideo {
+        .headerVideo, .imgHeader {
           width: 40vw !important;
           cursor: pointer;
           margin-left: 12.5vw;
         }
 
-        .headerVideo:hover {
+        .headerVideo:hover, .imgHeader:hover {
           transition: transform 0.5s ease-in-out; /* Changer la durée et la fonction de temporisation au besoin */
           transform: scale(1.03);
         }
