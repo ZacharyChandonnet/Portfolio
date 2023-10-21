@@ -45,7 +45,7 @@ export default class App {
     static title() {
 
         gsap.to('.title', {
-            delay: 2,
+            delay: 0,
             y: 0,
             duration: 4,
             opacity: 1,
