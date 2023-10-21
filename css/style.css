@@ -112,8 +112,9 @@ h6 {
   font-size: 1.2rem;
   margin: 1.5rem 0 1rem 0;
 }
-#work .right .showcase .headerVideo,
-#work .left .showcase .headerVideo {
+#work .right .showcase .headerVideo, #work .right .showcase .imgHeader,
+#work .left .showcase .headerVideo,
+#work .left .showcase .imgHeader {
   width: 90vw;
 }
 #work .right .description,
