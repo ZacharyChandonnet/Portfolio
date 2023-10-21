@@ -40,7 +40,7 @@
 
     <title>chando.dev</title>
   </head>
-  <body onload="move()">
+  <body>
     <div id="preloader">
       <div id="percent">chando.dev</div>
       <div id="bar">
@@ -241,45 +241,51 @@
 
     </div>
   </body>
-  <script>
-    const screen = gsap.timeline({
-      paused: "true",
-    });
+   <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const screen = gsap.timeline({
+          paused: true,
+        });
 
-    screen.to("#percent, #bar", {
-      duration: 0.5,
-      opacity: 0,
-      zIndex: -1,
-    });
+        screen.to("#percent, #bar", {
+          duration: 0.5,
+          opacity: 0,
+          zIndex: -1,
+        });
 
-    screen.to("#preloader", {
-      duration: 1.5,
-      width: "0%",
-    });
+        screen.to("#preloader", {
+          duration: 1.5,
+          width: "0%",
+        });
 
-    screen.from(
-      ".navbar",
-      {
-        duration: 1.5,
-        y: "-350%",
-      },
-    );
-    var width = 1;
-    var bar = document.getElementById("barconfirm");
-    var id;
-    function move() {
-      id = setInterval(frame, 10);
-    }
-    function frame() {
-      if (width >= 100) {
-        clearInterval(id);
-        screen.play();
-      } else {
-        width++;
-        bar.style.width = width ;
-       
-      }
-    }
+        screen.from(".navbar", {
+          duration: 1.5,
+          y: "-350%",
+        });
 
-  </script>
+        var width = 1;
+        var bar = document.getElementById("barconfirm");
+        var id;
+
+        function move() {
+          id = setInterval(frame, 10);
+        }
+
+        function frame() {
+          if (width >= 100) {
+            clearInterval(id);
+            screen.play();
+          } else {
+            width++;
+            bar.style.width = width + "%"; 
+            bar.innerHTML = width * 1 + "%";
+            bar.style.position = "absolute";
+            bar.style.left = "50vw";
+            bar.style.marginLeft = "-20px";
+          }
+        }
+
+        move();
+      });
+    </script>
 </html>
