@@ -111,7 +111,8 @@ h6 {
   font-size: 1.2rem;
   margin: 1.5rem 0 1rem 0;
 }
-#work .right .showcase .headerVideo, #work .right .showcase .imgHeader,
+#work .right .showcase .headerVideo,
+#work .right .showcase .imgHeader,
 #work .left .showcase .headerVideo,
 #work .left .showcase .imgHeader {
   width: 90vw;
@@ -265,7 +266,8 @@ h6 {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-#contact #form input, #contact #form textarea {
+#contact #form input,
+#contact #form textarea {
   color: white;
   background: none;
   border: none;
@@ -599,16 +601,19 @@ header .landing .division .circle {
   #work .right {
     display: flex !important;
     flex-direction: inherit !important;
+    flex-wrap: nowrap !important;
   }
   #work .right .showcase {
     width: 40vw !important;
   }
-  #work .right .showcase .headerVideo, #work .right .showcase .imgHeader {
+  #work .right .showcase .headerVideo,
+  #work .right .showcase .imgHeader {
     width: 40vw !important;
     margin-right: 12.5vw;
     cursor: pointer;
   }
-  #work .right .showcase .headerVideo:hover, #work .right .showcase .imgHeader:hover {
+  #work .right .showcase .headerVideo:hover,
+  #work .right .showcase .imgHeader:hover {
     transition: transform 0.5s ease-in-out;
     transform: scale(1.05);
   }
@@ -616,21 +621,25 @@ header .landing .division .circle {
     line-height: 45px !important;
     margin: auto;
     width: 40vw !important;
+    margin-left: 12.5rem !important;
   }
   #work .left {
     display: flex !important;
     margin-top: 25px !important;
     flex-direction: inherit !important;
+    flex-wrap: nowrap !important;
   }
   #work .left .showcase {
     width: 40vw !important;
   }
-  #work .left .showcase .headerVideo, #work .left .showcase .imgHeader {
+  #work .left .showcase .headerVideo,
+  #work .left .showcase .imgHeader {
     width: 40vw !important;
     cursor: pointer;
     margin-left: 12.5vw;
   }
-  #work .left .showcase .headerVideo:hover, #work .left .showcase .imgHeader:hover {
+  #work .left .showcase .headerVideo:hover,
+  #work .left .showcase .imgHeader:hover {
     transition: transform 0.5s ease-in-out;
     transform: scale(1.05);
   }

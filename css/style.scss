@@ -116,7 +116,8 @@ h6 {
     }
 
     .showcase {
-      .headerVideo, .imgHeader {
+      .headerVideo,
+      .imgHeader {
         width: 90vw;
       }
     }
@@ -139,11 +140,10 @@ h6 {
       text-align: center;
     }
   }
-  .left{
+  .left {
     flex-direction: column-reverse;
   }
 }
-
 
 #resume {
   .about {
@@ -164,20 +164,20 @@ h6 {
         font-size: 30px;
         cursor: pointer;
         text-shadow: 0 0 35px rgba(240, 124, 255, 0.322);
-        transition: font-size 0.2s ease-in-out; 
+        transition: font-size 0.2s ease-in-out;
         display: block;
       }
-      
+
       .icon.reversed:hover {
-        font-size: 65px !important; 
+        font-size: 65px !important;
       }
 
       .icon.reversed:nth-of-type(1):hover {
-        font-size: 100px !important; 
+        font-size: 100px !important;
       }
 
       .icon:hover {
-        font-size:75px !important; 
+        font-size: 75px !important;
       }
 
       .icon:nth-of-type(1):hover {
@@ -188,11 +188,9 @@ h6 {
         font-size: 87px !important;
       }
 
-
       .icon:nth-of-type(5):hover {
         font-size: 65px !important;
       }
-
 
       @keyframes spinClockwise {
         0% {
@@ -202,7 +200,7 @@ h6 {
           transform: rotate(360deg);
         }
       }
-      
+
       @keyframes spinAntiClockwise {
         0% {
           transform: rotate(0deg);
@@ -211,29 +209,28 @@ h6 {
           transform: rotate(-360deg);
         }
       }
-      
+
       .icon:not(.reversed) {
         animation: spinClockwise 20s infinite linear;
       }
-      
+
       .icon.reversed {
         animation: spinAntiClockwise 20s infinite linear;
       }
 
       .icon.faster {
-        animation-duration: 10s; 
+        animation-duration: 10s;
       }
 
       .icon.slow {
-        animation-duration: 35s; 
+        animation-duration: 35s;
       }
 
       .icon.slower {
-        animation-duration: 25s; 
+        animation-duration: 25s;
       }
     }
   }
-
 
   @keyframes animateGradient {
     0% {
@@ -256,7 +253,7 @@ h6 {
   margin-top: 5rem;
 
   .glowBox {
-    position: relative; 
+    position: relative;
     height: 300px;
     h2 {
       text-align: center;
@@ -275,7 +272,7 @@ h6 {
     z-index: -1;
     border: 1px solid transparent;
     border-image: linear-gradient(45deg, #ed71ad, #7277f1);
-    border-image-slice: 1; 
+    border-image-slice: 1;
     animation: animateBorder 3s infinite alternate;
   }
 
@@ -288,7 +285,7 @@ h6 {
     }
   }
 
-  #form{
+  #form {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     width: 90vw;
@@ -297,14 +294,15 @@ h6 {
     margin-top: 2rem;
     margin-bottom: 2rem;
 
-    input, textarea{
+    input,
+    textarea {
       color: white;
       background: none;
       border: none;
       border-bottom: 1px solid #fff;
     }
 
-    button{
+    button {
       background: linear-gradient(45deg, #ed71ad, #7277f1);
       text-align: center;
       cursor: pointer;
@@ -322,7 +320,6 @@ h6 {
   }
 }
 
-
 header {
   height: 100vh !important;
   .component-header {
@@ -338,7 +335,6 @@ header {
       left: 0;
       width: 100%;
       z-index: 99999;
-
 
       .menu-ham {
         display: block;
@@ -386,28 +382,28 @@ header {
     }
   }
 
-  .landing{
+  .landing {
     position: relative;
     margin-top: 50%;
-    .division{
+    .division {
       display: flex;
 
-      .texte{
+      .texte {
         display: flex;
         padding-top: 8rem;
-    
-        h1{
+
+        h1 {
           font-size: 1.2rem;
           padding-top: 4rem;
           line-height: 2.2rem;
 
-          i{
-            font-size: .8rem;
+          i {
+            font-size: 0.8rem;
             cursor: pointer;
           }
         }
       }
-    
+
       .circle {
         display: block;
         position: absolute;
@@ -424,7 +420,7 @@ header {
         margin-right: 2rem;
       }
     }
-  
+
     @keyframes pulse {
       0% {
         border-radius: 50% 20% 80% 30% / 40% 60% 70% 10%;
@@ -433,7 +429,7 @@ header {
         border-radius: 40% 60% 70% 10% / 50% 20% 80% 30%;
       }
     }
-  
+
     @keyframes glow {
       0%,
       100% {
@@ -449,36 +445,34 @@ header {
 /* TABLET */
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  #resume{
+  #resume {
     margin-top: 10rem !important;
-    .language{
+    .language {
       gap: 90px !important;
     }
   }
 
-  header{
-
-    .landing{
+  header {
+    .landing {
       margin-top: 10rem !important;
 
-      .circle{
+      .circle {
         width: 900px !important;
         height: 900px !important;
       }
 
-      .division{
-
-        p{
+      .division {
+        p {
           margin-top: 5rem;
         }
 
-        h1{
+        h1 {
           font-size: 2rem !important;
           padding-left: 5rem !important;
           line-height: 3rem !important;
           padding-top: 10rem !important;
 
-          i{
+          i {
             font-size: 1rem !important;
           }
         }
@@ -509,7 +503,7 @@ header {
         margin-left: 20vw;
         gap: 100px !important;
         margin-top: inherit !important;
-        
+
         .icon:nth-of-type(1) {
           font-size: 100px;
         }
@@ -562,7 +556,6 @@ header {
         top: inherit !important;
         left: inherit !important;
         width: 100% !important;
-       
 
         .nav-links {
           top: inherit !important;
@@ -576,7 +569,6 @@ header {
           justify-content: inherit !important;
           align-items: inherit !important;
           margin-left: inherit !important;
-          
 
           ul {
             position: absolute !important;
@@ -617,25 +609,25 @@ header {
     }
   }
 
-  .landing{
+  .landing {
     margin-top: 7rem !important;
 
-    .division{
+    .division {
       display: flex;
 
-      .texte{
+      .texte {
         padding-top: 15rem !important;
-        p{
+        p {
           margin-top: 1.5rem;
         }
 
-        h1{
+        h1 {
           font-size: 4rem !important;
           padding-left: 10rem !important;
           line-height: inherit !important;
           padding-top: 0.1rem !important;
 
-          i{
+          i {
             font-size: 2rem !important;
           }
         }
@@ -643,20 +635,20 @@ header {
         .highlight {
           position: relative;
         }
-        
+
         .highlight::before {
           content: "";
           position: absolute;
           bottom: 0;
           left: 0;
           margin-bottom: 35px;
-          background-color: white; 
+          background-color: white;
           z-index: -1;
-          padding: 2px; 
+          padding: 2px;
           width: 30rem;
         }
       }
-      .circle{
+      .circle {
         width: 850px !important;
         height: 800px !important;
         margin-right: 3rem !important;
@@ -697,18 +689,21 @@ header {
     .right {
       display: flex !important;
       flex-direction: inherit !important;
+      flex-wrap: nowrap !important;
 
       .showcase {
         width: 40vw !important;
 
-        .headerVideo, .imgHeader {
+        .headerVideo,
+        .imgHeader {
           width: 40vw !important;
           margin-right: 12.5vw;
           cursor: pointer;
         }
 
-        .headerVideo:hover, .imgHeader:hover{
-          transition: transform 0.5s ease-in-out; 
+        .headerVideo:hover,
+        .imgHeader:hover {
+          transition: transform 0.5s ease-in-out;
           transform: scale(1.05);
         }
       }
@@ -717,6 +712,7 @@ header {
         line-height: 45px !important;
         margin: auto;
         width: 40vw !important;
+        margin-left: 12.5rem !important;
       }
     }
 
@@ -724,17 +720,20 @@ header {
       display: flex !important;
       margin-top: 25px !important;
       flex-direction: inherit !important;
+      flex-wrap: nowrap !important;
       .showcase {
         width: 40vw !important;
 
-        .headerVideo, .imgHeader {
+        .headerVideo,
+        .imgHeader {
           width: 40vw !important;
           cursor: pointer;
           margin-left: 12.5vw;
         }
 
-        .headerVideo:hover, .imgHeader:hover {
-          transition: transform 0.5s ease-in-out; 
+        .headerVideo:hover,
+        .imgHeader:hover {
+          transition: transform 0.5s ease-in-out;
           transform: scale(1.05);
         }
       }
@@ -746,7 +745,6 @@ header {
       }
     }
   }
-
 }
 
 @media screen and (max-width: 376px) {
@@ -760,8 +758,8 @@ header {
   }
 
   .glowBox {
-    text-align: center; 
-    position: relative; 
+    text-align: center;
+    position: relative;
     margin-top: 12rem !important;
     width: 100vw !important;
     height: 500px !important;
@@ -776,10 +774,9 @@ header {
       gap: 2.5rem !important;
     }
 
- 
     #form button {
       display: block;
-      margin: 1rem auto; 
+      margin: 1rem auto;
       width: 5vw !important;
     }
   }
