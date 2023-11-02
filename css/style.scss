@@ -696,12 +696,14 @@ header {
 
     .right {
       display: flex !important;
+      flex-direction: inherit !important;
 
       .showcase {
         width: 40vw !important;
 
         .headerVideo, .imgHeader {
           width: 40vw !important;
+          margin-right: 12.5vw;
           cursor: pointer;
         }
 
@@ -714,7 +716,6 @@ header {
       .description {
         line-height: 45px !important;
         margin: auto;
-        margin-left: 15rem;
         width: 40vw !important;
       }
     }
@@ -733,8 +734,8 @@ header {
         }
 
         .headerVideo:hover, .imgHeader:hover {
-          transition: transform 0.5s ease-in-out; /* Changer la durée et la fonction de temporisation au besoin */
-          transform: scale(1.03);
+          transition: transform 0.5s ease-in-out; 
+          transform: scale(1.05);
         }
       }
 
