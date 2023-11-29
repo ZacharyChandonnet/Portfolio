@@ -96,6 +96,11 @@ h6 {
   width: 35vw;
 }
 
+#google{
+  font-weight: 100;
+  font-size: 15px;
+}
+
 #work {
   margin-top: 5rem;
 
@@ -488,6 +493,24 @@ header {
 /* DESKTOP */
 
 @media screen and (min-width: 1200px) {
+
+  #contact{
+    .glowBox{
+      width: 70vw !important;
+      margin: 0 auto !important;
+      margin-top: 12rem !important;
+
+      form{
+        width: 90% !important;
+      }
+    }
+  }
+
+  #google{
+    font-weight: 100;
+    font-size: 31px;
+  }
+
   #resume {
     margin-top: 12rem !important;
     .about {
